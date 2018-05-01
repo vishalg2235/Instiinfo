@@ -1,0 +1,113 @@
+@import "compass/css3";
+
+.list-container {
+	position: relative;
+	overflow: hidden;
+}
+
+.list-body-container {
+	position: relative;
+	box-sizing:border-box;
+	height: 600px;
+	width: 100%;
+}
+.list-body-container > ul {
+	transition:min-height 0 linear, transform 0.3s ease-out;
+	translateX:115%;
+	box-sizing:border-box;
+	box-shadow:0 0 32px 0 rgba(0, 0, 0, 0.1);
+	display: block;
+	list-style: none;
+	top: 0;
+	left: 0;
+	margin: 0;
+	border: 0 none;
+	padding: 0;
+	width: 100%;
+	background-color: white;
+}
+
+
+.list-body-container ul ul {
+	width:80%;
+	box-sizing:border-box;
+	box-shadow:0 0 18px 0 rgba(0, 0, 0, 0.1);
+	margin-left:17px;
+}
+.list-body-container .active-list .parent-list {
+	translateX:0;
+}
+
+.list-body-container li {
+	display: block;
+	margin: 0 0 0 2rem;
+	border-top: 1px solid #D2D2D2;
+	padding: 0;
+}
+.list-body-container li:first-child {
+	border-top: 0 none;
+}
+
+.list-body-container li a.list-link {
+	display: inline-block;
+	padding: 1em 6rem 1em 1em;
+	color: black;
+	text-decoration: none;
+	font-size: 1.2em;
+	font-weight: 300;
+	width:75%;
+}
+.list-body-container li a .list-label {
+	float: left;
+}
+
+.list-body-container li a .right-arrow {
+	float: right;
+}
+/*
+.list-body-container li a:hover, .list-body-container li a:focus, .list-body-container li a.active-link {
+	color: #2eb5ef;
+}*/
+
+.list-body-container ul li ul li a{
+	width:65% !important;
+}
+
+.list-body-container i{
+	display:inline-block;
+    vertical-align: middle;
+    font-size: 20px;
+	max-height:47px;
+	color:#808080;
+}
+
+.list-body-container i:hover{
+	color:#5D73D6;
+	font-size:25px;
+}
+
+@media (max-width: 930px) {
+
+	.list-body-container li a.list-link{
+	width:60% !important;
+	}
+}
+
+@media (max-width: 700px) {
+	
+	.list-body-container li{
+		margin-left:.6em ! important;
+	}
+	.list-body-container li a.list-link{
+	width:50% !important;
+	}
+}
+
+@media (max-width: 500px) {
+	.list-body-container li a.list-link{
+		width:40% !important;
+	}
+}
+
+	
+}
